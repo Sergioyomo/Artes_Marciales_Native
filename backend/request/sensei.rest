@@ -1,0 +1,53 @@
+### Recuperar un sensei por idsensei
+GET http://localhost:3000/api/sensei/2
+
+###
+
+GET http://localhost:3000/api/sensei
+
+###
+
+POST http://localhost:3000/api/sensei
+Content-Type: application/json
+
+{
+		"nombre": "Marco",
+		"fecha_nacimiento": "2012-12-17",
+		"tipo": "Kunfu",
+		"peso": "80.80",
+		"activo": true
+}
+
+###
+# Borrado de un sensei que no existe (404)
+DELETE http://localhost:3000/api/sensei/99
+
+###
+# Borrado de un sensei que existe (204)
+DELETE http://localhost:3000/api/sensei/3
+
+### Actualizacion de un sensei
+PUT  http://localhost:3000/api/sensei/1
+Content-Type: application/json
+
+{
+            "idSensei": 1,
+			"nombre": "Juan",
+			"fecha_nacimiento": "2015-01-14",
+			"tipo": "Taekwondo",
+			"peso": "83.30",
+			"activo": false
+}
+
+### Actualizacion de un sensei BAD REQUEST
+PUT  http://localhost:3000/api/sensei/82
+Content-Type: application/json
+
+{
+            "idSensei": 1,
+			"nombre": "Juan",
+			"fecha_nacimiento": "2015-01-14",
+			"tipo": "Taekwondo",
+			"peso": "83.30",
+			"activo": false
+}

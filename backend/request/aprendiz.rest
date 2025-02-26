@@ -1,0 +1,53 @@
+### Recuperar un aprendiz por idaprendiz
+GET http://localhost:3000/api/aprendiz/2
+
+###
+
+GET http://localhost:3000/api/aprendiz
+
+###
+
+POST http://localhost:3000/api/aprendiz
+Content-Type: application/json
+
+{
+		"nombre": "Lucia",
+		"idSensei": 1,
+		"fecha_nacimiento": "2015-10-17",
+		"cuota": "33.50",
+		"pagado": false
+}
+
+###
+# Borrado de un aprendiz que no existe (404)
+DELETE http://localhost:3000/api/aprendiz/99
+
+###
+# Borrado de un aprendiz que existe (204)
+DELETE http://localhost:3000/api/aprendiz/3
+
+### Actualizacion de un aprendiz
+PUT  http://localhost:3000/api/aprendiz/2
+Content-Type: application/json
+
+{
+        "idAprendiz": 2,
+		"nombre": "Alvaro",
+		"idSensei": 1,
+		"fecha_nacimiento": "2016-05-17",
+		"cuota": "33.35",
+		"pagado": true
+}
+
+### Actualizacion de un aprendiz BAD REQUEST
+PUT  http://localhost:3000/api/aprendiz/82
+Content-Type: application/json
+
+{
+        "idAprendiz": 2,
+		"nombre": "Alvaro",
+		"idSensei": 1,
+		"fecha_nacimiento": "2016-05-17",
+		"cuota": "33.35",
+		"pagado": true
+}
