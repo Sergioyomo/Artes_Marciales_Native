@@ -95,7 +95,7 @@ function AltaScreen() {
   }
 
   return (
-    <VStack className="w-full max-w-[300px] rounded-md border border-background-200 p-4">
+    <VStack className="w-full max-w-[500px] rounded-md border border-background-200 p-4">
       <FormControl
         isInvalid={datosValidos.nombre}
         size="md"

@@ -7,7 +7,7 @@ export function HomeScreen() {
       <Image
         source={require("../../assets/karate.jpg")}
         style={styles.image}
-        resizeMode="cover"
+        resizeMode="contain"
       />
       <Text style={styles.text}>
         Bienvenido a nuestra comunidad de Artes Marciales
@@ -32,5 +32,6 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 20,
     fontWeight: "bold",
+    textAlign: "center",
   },
 });
